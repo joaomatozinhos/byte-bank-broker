@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { AcoesService } from './acoes.service';
 import { Acoes } from './modelo/acoes';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-acoes',
@@ -12,12 +13,9 @@ export class AcoesComponent implements OnInit {
   acoesInput = new FormControl();
   acoes: Acoes;
 
-  constructor(
-    private acoesService: AcoesService
-  ) {}
+  constructor(private acoesService: AcoesService) {}
 
   ngOnInit(): void {
-    this.acoesService.getAcoes()
-      .subscribe(dados => this.acoes = dados.payload)
+    this.acoesService.getAcoes().subscribe((acoes) => (this.acoes = acoes));
   }
 }
