@@ -20,9 +20,6 @@ export class AcoesService {
   }
 
   private ordenaPorCodigo(acaoA: Acao, acaoB: Acao) {
-    console.log('A', acaoA);
-    console.log('B', acaoB);
-
     if (acaoA.codigo > acaoB.codigo) {
       return 1;
     }
