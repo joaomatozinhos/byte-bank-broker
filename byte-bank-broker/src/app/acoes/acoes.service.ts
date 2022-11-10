@@ -11,6 +11,7 @@ export class AcoesService {
 
   getAcoes(valor?: string) {
     const params = valor ? new HttpParams().append('valor', valor) : undefined;
+
     return this.httpClient
       .get<AcoesAPI>('http://localhost:3000/acoes', { params })
       .pipe(
