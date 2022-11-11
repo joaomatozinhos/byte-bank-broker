@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { AcoesService } from './acoes.service';
-import { switchMap, tap } from 'rxjs/operators';
+import { filter, switchMap, tap } from 'rxjs/operators';
 import { merge } from 'rxjs';
 
 @Component({
@@ -15,6 +15,9 @@ export class AcoesComponent implements OnInit {
 
   filtroPeloInput$ = this.acoesInput.valueChanges.pipe(
     tap(console.log),
+    filter(
+      (valorDigitado) => valorDigitado.length >= 3 || valorDigitado.length == 0
+    ),
     switchMap((valorDigitado) => this.acoesService.getAcoes(valorDigitado)),
     tap(console.log)
   );
