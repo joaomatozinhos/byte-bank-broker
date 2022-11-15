@@ -12,11 +12,17 @@ Desenvolvida no curso 'Angular e RxJS: programação reativa' da Alura.
 - Função merge;
 - Requisições HTTP.
 
+### Pré-requisitos:
+
+Ter instalado na sua máquina:
+
+- NodeJS na versão 12 ou posterior
+- Angular CLI
+
 ### Como iniciar a aplicação
 
-1. Baixe o código na sua máquina;
-2. Abra o terminal na raiz do projeto;
-3. Rode npm install para instalar todas as depêndencias;
-4. Abra o terminal na pasta api e rode npm run start para iniciar o servidor;
-5. Abra o terminal na pasta byte-bank-broker e rode ng serve para iniciar a aplicação;
-6. O login de acesso é 'alvaro' e senha '123'.
+1. Faça o download do código na sua máquina;
+2. Descompacte a pasta;
+3. Entre pela sua linha de comando na pasta api e use o comando npm install para instalar todas as depêndencias, e execute npm run start para iniciar o servidor;
+4. Em outra aba da linha de comando, entre na pasta byte-bank-broker, instale as dependências do projeto com o comando npm install, e execute ng serve --o para iniciar a aplicação;
+5. O login de acesso é 'alvaro' e senha '123'.
